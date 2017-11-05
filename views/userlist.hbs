@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/base.css'/>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='stylesheet' href='/stylesheets/users.css'/>
+  </head>
+  <body>
+    <h1 class="workshop-name">Best Buddies Volunteer List</h1>
+    <div class="content">
+      <h1 class="content-title">Userlist</h1>
+      {{#each users}}
+        <li>Name: {{firstName}} {{lastName}}</li>
+        <li>Age: {{age}}</li>
+        <li>Email: {{email}}</li>
+      {{/each}}
+
+      <form name="signup" method="post" action="/signup">
+        <button class="submit">Add Volunteer</button>
+      </form>
+
+    </div>
+
+
+    
+  </body>
+</html>
