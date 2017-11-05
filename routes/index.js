@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var request = require('request');
 
-var db = [{"firstName" : "Pusheen", "lastName": "Meow", "email" : "pm@mit.edu", "age": "3"},
-		{"firstName" : "Sandeep", "lastName": "Silwal", "email" : "ss@mit.edu", "age": "10"}];
-
+var db = [];
 /* GET home page. */
 router.get('/', function (req, res, next) {
 
@@ -13,8 +12,18 @@ router.get('/', function (req, res, next) {
 
 /* GET userlist*/
 router.get('/userlist', function (req, res, next) {
-  res.render('userlist', {users:db});
-
+		var options = {
+	    url: 'http://localhost:8080/volunteers',
+	    method: 'GET'
+	    }
+	request.get(options,
+	    function (error, response, body) {
+	        if (!error && response.statusCode == 200) {
+	        	db = JSON.parse(body);
+	        }
+	    }
+	);
+	res.render('userlist', db);
 });
 
 
@@ -32,9 +41,21 @@ router.post('/adduser', function (req, res, next) {
 	var age = req.body.age;
 
 	// Adding the new entry to the db
-	newUser = {"firstName": firstName, "lastname": lastName, "email": email, "age": age};
-	db.push(newUser);
+	newUser = {"firstName": firstName, "lastName": lastName, "email": email, "age": age};
+	var options = {
+	    url: 'http://localhost:8080/volunteers',
+	    method: 'POST',
+	    json: newUser
+		}
 
+	request.post(options,
+
+	    function (error, response, body) {
+	        if (!error && response.statusCode == 200) {
+	            console.log(body)
+	        }
+	    }
+	);
 	// redirect to the original page
 	res.redirect('/userlist');
 });
