@@ -3,7 +3,6 @@ var path = require("path");
 var bodyParser = require("body-parser");
 var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
-
 var VOLUNTEER_COLLECTION = "volunteers";
 
 var app = express();
@@ -14,7 +13,7 @@ app.use(bodyParser.json());
 var db;
 
 // Connect to the database before starting the application server.
-mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
+mongodb.MongoClient.connect("mongodb://test:test@ds241025.mlab.com:41025/volunteers", function (err, database) {
   if (err) {
     console.log(err);
     process.exit(1);
@@ -60,6 +59,7 @@ app.post("/volunteers", function(req, res) {
 
   if (!(req.body.firstName || req.body.lastName)) {
     handleError(res, "Invalid user input", "Must provide a first or last name.", 400);
+    console.log(req.body);
   }
 
   db.collection(VOLUNTEER_COLLECTION).insertOne(newContact, function(err, doc) {
