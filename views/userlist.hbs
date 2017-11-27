@@ -1,26 +1,53 @@
 <html>
   <head>
-    <link rel='stylesheet' href='/stylesheets/base.css'/>
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
-    <link rel='stylesheet' href='/stylesheets/users.css'/>
+    <link rel='stylesheet' href='/stylesheets/table.css'/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <script type="text/javascript" src="/js/table.js"></script>
   </head>
   <body>
-    <h1 class="workshop-name">Best Buddies Volunteer List</h1>
-    <div class="content">
-      <h1 class="content-title">Userlist</h1>
-      {{#each users}}
-        <li>Name: {{firstName}} {{lastName}}</li>
-        <li>Age: {{age}}</li>
-        <li>Email: {{email}}</li>
-      {{/each}}
-
-      <form name="signup" method="post" action="/signup">
-        <button class="submit">Add Volunteer</button>
-      </form>
-
-    </div>
-
-
-    
+  <form name="signup" method="post" action="/signup">
+  <button class="button">Add Volunteer</button>
+  </form>
+  <div id="users">
+  <input class="search" placeholder="Search for Keywords">
+  <h1>Volunteer List</h1>
+  <div class="tbl-header">
+    <table id="datatable" cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th>Task</th>
+          <th>Events Signed Up</th>
+          <th>Events Attended</th>
+          <th>Contacted</th>
+          <th>Transportation</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody class = "list">
+        {{#each users}}
+        <tr>
+            <td class = "name">{{firstName}}, {{lastName}}</td>
+            <td class = "email">{{email}}</td>
+            <td class = "phone">123</td>
+            <td class = "address">test</td>
+            <td class = "task">Fall, Winter, Summer</td>
+            <td class = "signedup">Fall, Summer</td>
+            <td class = "attended">Y</td>
+            <td class = "contacted">N</td>
+            <td class = "transportation">Y</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
   </body>
 </html>
