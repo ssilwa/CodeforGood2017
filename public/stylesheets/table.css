@@ -1,0 +1,191 @@
+@import url('http://fonts.googleapis.com/css?family=Arvo');
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+
+h1{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+/*.tbl-header{
+  background-color: rgba(255,255,255,0.3);
+ }
+
+.tbl-content{
+  height:400px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}*/
+
+thead{
+  background-color: rgba(255,255,255,0.3);
+ }
+
+tbody{
+  height:400px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td{
+  padding: 10px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+td:nth-child(1) {
+  width: 10px;
+}
+th:nth-child(1) {
+  width: 10px;
+}
+
+.button {
+    background-color: #85C7F2;
+    border: 1px solid #FFFFFF;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+.list {
+  font-family: sans-serif;
+}
+
+input {
+  border:solid 1px #ccc;
+  border-radius: 5px;
+  padding:7px 14px;
+  margin-bottom:10px
+}
+input:focus {
+  outline:none;
+  border-color:#aaa;
+}
+.sort {
+  padding:8px 30px;
+  border-radius: 6px;
+  border:none;
+  display:inline-block;
+  color:#fff;
+  text-decoration: none;
+  background-color: #28a8e0;
+  height:30px;
+}
+.sort:hover {
+  text-decoration: none;
+  background-color:#1b8aba;
+}
+.sort:focus {
+  outline:none;
+}
+.sort:after {
+  display:inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+}
+.sort.asc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:4px;
+  right:-5px;
+}
+.sort.desc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:-4px;
+  right:-5px;
+}
+
+.search{
+    position:absolute;
+    left:190px;
+    top:8px;
+    width:15%;
+    height:50px;
+    background-color:white;
+    color:grey;
+    font-size: 16px;
+}
+
+/* demo styles */
+
+body{
+  background: -webkit-linear-gradient(top,  #636363,   #636363);
+  background: linear-gradient(to right,   #636363,   #636363);
+  font-family: 'Arvo', sans-serif;
+}
+section{
+  margin: 50px;
+}
+
+
+/*for header arrows*/
+#datatable thead tr th.headerSortUp, #datatable thead tr th.headerSortDown {
+    color:#4C4C4C;
+}
+
+#datatable thead tr th.headerSortUp {
+    background-image: url('../images/up-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right
+}
+#datatable thead tr th.headerSortDown {
+    background-image: url('../images/down-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right
+}
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}

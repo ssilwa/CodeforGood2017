@@ -1,0 +1,34 @@
+{
+  "name": "workshop",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "express-handlebars": "^3.0.0",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.13.0",
+    "morgan": "~1.6.1",
+    "request": "^2.83.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "description": "Get Started  1. in the console, type `npm install`. 2. type `npm start` and go to `localhost:3000`. There should be a userlist, if not, do `npm install --save mongodb` and try again",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssilwa/CodeforGood2017.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssilwa/CodeforGood2017/issues"
+  },
+  "homepage": "https://github.com/ssilwa/CodeforGood2017#readme"
+}

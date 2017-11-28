@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='/stylesheets/table.css'/>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+        <script type="text/javascript" src="/js/table.js"></script>
+    </head>
+    <body>
+    <form name="signup" method="post" action="/signup">
+        <button class="button">Add Volunteer</button>
+    </form>
+    <div id="users">
+        <input class="search" placeholder="Search for Keywords">
+        <h1>Volunteer List</h1>
+        <table id="datatable" cellpadding="0" cellspacing="0" border="0">
+            <thead>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th><span>Name</span></th>
+                    <th><span>Email</span></th>
+                    <th><span>Phone</span></th>
+                    <th><span>Address</span></th>
+                    <th><span>Task</span></th>
+                    <th><span>Events Signed Up</span></th>
+                    <th><span>Events Attended</span></th>
+                    <th><span>Contacted</span></th>
+                    <th><span>Transportation</span></th>
+                </tr>
+            </thead>
+            <tbody class = "list">
+                {{#each users}}
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td class = "name">{{firstName}}, {{lastName}}</td>
+                    <td class = "email">{{email}}</td>
+                    <td class = "phone">123</td>
+                    <td class = "address">test</td>
+                    <td class = "task">Fall, Winter, Summer</td>
+                    <td class = "signedup">Fall, Summer</td>
+                    <td class = "attended">Y</td>
+                    <td class = "contacted">N</td>
+                    <td class = "transportation">Y</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        </div>
+        <script type="text/javascript">
+            $(function(){
+            $("#datatable").tablesorter();
+        });
+        </script>
+    </body>
+</html>
