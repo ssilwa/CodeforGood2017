@@ -38,10 +38,22 @@ router.post('/adduser', function (req, res, next) {
 	var firstName = req.body.firstname;
 	var lastName = req.body.lastname;
 	var email = req.body.email;
-	var age = req.body.age;
+	var background = req.body.background;
+	var phone = req.body.phone;
+	var address = req.body.address;
+	var task = req.body.task;
+	var idd = req.body.idd;
+	var student = req.body.student;
+	var signedup = req.body.signedup;
+	var attended = req.body.attended;
+	var contacted = req.body.contacted;
+	var donated = req.body.donated;
+	var transportation = req.body.transportation;
+	var other = req.body.other
+
 
 	// Adding the new entry to the db
-	newUser = {"firstName": firstName, "lastName": lastName, "email": email, "age": age};
+	newUser = {"firstName": firstName, "lastName": lastName, "email": email, "background": background, "phone": phone, "address": address, "task": task, "idd": idd, "student": student, "signedup": signedup, "attended": attended, "contacted": contacted, "donated": donated, "transportation": transportation, "other": other};
 	var options = {
 	    url: 'http://localhost:8080/volunteers',
 	    method: 'POST',
@@ -61,6 +73,6 @@ router.post('/adduser', function (req, res, next) {
 });
 
 
-
+// https://stackoverflow.com/questions/7997627/google-maps-how-to-get-the-distance-between-two-point-in-metre
 
 module.exports = router;

@@ -100,7 +100,7 @@ app.put("/volunteers/:id", function(req, res) {
   });
 });
 
-app.delete("/volunteerss/:id", function(req, res) {
+app.delete("/volunteers/:id", function(req, res) {
   db.collection(VOLUNTEER_COLLECTION).deleteOne({_id: new ObjectID(req.params.id)}, function(err, result) {
     if (err) {
       handleError(res, err.message, "Failed to delete contact");

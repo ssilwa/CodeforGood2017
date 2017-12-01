@@ -16,15 +16,20 @@
     <table id="datatable" cellpadding="0" cellspacing="0" border="0">
       <thead>
         <tr>
-          <th id = "name">Name</th>
-          <th id = "email" >Email</th>
-          <th id = "phone" >Phone</th>
-          <th id = "address" >Address</th>
-          <th id = "task" >Task</th>
-          <th id = "signedup" >Events Signed Up</th>
-          <th id = "attended" >Events Attended</th>
+          <th id = "name">Name</th>                     
+          <th id = "email" >Email</th>  
+          <th id = "background" >Background</th> 
+          <th id = "idd" >IDD</th> 
+          <th id = "student">Student</th> 
+          <th id = "phone" >Phone</th> 
+          <th id = "address" >Address</th> 
+          <th id = "task" >Task</th> 
+          <th id = "signedup" >Events-Signed-Up</th>
+          <th id = "attended" >Events-Attended</th>
           <th id = "contacted" >Contacted</th>
+          <th id = "donated" > Donated </th>
           <th id = "transportation" >Transportation</th>
+          <th id = "other"> Other Involvement </th>
         </tr>
       </thead>
     </table>
@@ -36,13 +41,18 @@
         <tr>
             <td class = "name">{{firstName}}, {{lastName}}</td>
             <td class = "email">{{email}}</td>
-            <td class = "phone">123</td>
-            <td class = "address">test</td>
-            <td class = "task">Fall, Winter, Summer</td>
-            <td class = "signedup">Fall, Summer</td>
-            <td class = "attended">Y</td>
-            <td class = "contacted">N</td>
-            <td class = "transportation">Y</td>
+            <td class = "background">{{background}}</td>
+            <td class = "idd">{{idd}}</td>
+            <td class = "student">{{student}}</td>
+            <td class = "phone">{{phone}}</td>
+            <td class = "address">{{address}}</td>
+            <td class = "task">{{task}}</td>
+            <td class = "signedup">{{signedup}}</td>
+            <td class = "attended">{{attended}}</td>
+            <td class = "contacted">{{contacted}}</td>
+            <td class = "donated">{{donated}}</td>
+            <td class = "transportation">{{transportation}}</td>
+            <td class = "other">{{other}}</td>
         </tr>
         {{/each}}
       </tbody>

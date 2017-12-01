@@ -6,7 +6,7 @@ $(window).on("load resize ", function() {
 
 $( document ).ready(function() {
 	var options = {
-	  valueNames: [ 'name', 'email', 'phone', 'address', 'task', 'signedup', 'attended', 'contacted', 'transportation' ]
+	  valueNames: [ 'name', 'email', 'age', 'phone', 'address', 'task', 'signedup', 'attended', 'contacted', 'transportation' ]
 	};
 	var userList = new List('users', options);
 
@@ -18,6 +18,11 @@ $( document ).ready(function() {
 	    sortTable(f_sl,n);
 	});
 	$("#email").click(function(){
+	    f_nm *= -1;
+	    var n = $(this).prevAll().length;
+	    sortTable(f_nm,n);
+	});
+	$("#idd").click(function(){
 	    f_nm *= -1;
 	    var n = $(this).prevAll().length;
 	    sortTable(f_nm,n);
@@ -52,7 +57,32 @@ $( document ).ready(function() {
 	    var n = $(this).prevAll().length;
 	    sortTable(f_nm,n);
 	});
+
 	$("#transportation").click(function(){
+	    f_nm *= -1;
+	    var n = $(this).prevAll().length;
+	    sortTable(f_nm,n);
+	});
+
+	$("#student").click(function(){
+	    f_nm *= -1;
+	    var n = $(this).prevAll().length;
+	    sortTable(f_nm,n);
+	});
+
+	$("#background").click(function(){
+	    f_nm *= -1;
+	    var n = $(this).prevAll().length;
+	    sortTable(f_nm,n);
+	});
+
+	$("#donated").click(function(){
+	    f_nm *= -1;
+	    var n = $(this).prevAll().length;
+	    sortTable(f_nm,n);
+	});
+
+	$("#other").click(function(){
 	    f_nm *= -1;
 	    var n = $(this).prevAll().length;
 	    sortTable(f_nm,n);
